@@ -9,12 +9,7 @@ html {
   background-size: cover;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-}
-
-body {
-  display: grid;
-  grid-template-columns: 65% 35%;
-  grid-template-rows: 5% 95% 95% 95% 95% 95%;
+  overflow: hidden;
 }
 
 h1 {
@@ -56,12 +51,6 @@ form {
   text-align: center;
 }
 
-img,
-.mockup {
-  height: 90vh;
-  position: fixed;
-}
-
 .nav-container {
   height: 1.2em;
   width: 100vw;
@@ -71,20 +60,67 @@ img,
   margin-top: 20px;
 }
 
-.nav-form,
-.nav-text {
+.nav-form, .nav-text {
   align-self: center;
   padding-right: 20px;
 }
 
-.image-container {
-    margin-top: 1.2em;
-    grid-column: 2/2;
+.content-wrapper {
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    max-width: 1400px;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
 }
 
-.tagline-container {
-  grid-column: 1/2;
-  grid-row: 2/3;
+.image-container {
+    order: 2; /* puts image on right */
+
+    /*centers image vertically*/
+    display: flex;
+    align-items: center;
+
+    /* */
+    /* max-width: 350px; */
+}
+
+img, .mockup {
+  /* max-width: 350px; */
+  max-height: 1097px;
+  height: 90vh;
+  width: auto;
+}
+
+.snap-scroller {
+    max-height: 100vh;
+    overflow-y: scroll;
+    -ms-scroll-snap-type: mandatory;
+        scroll-snap-type: mandatory;
+    -ms-scroll-snap-points-y: repeat(3rem);
+        scroll-snap-points-y: repeat(3rem);
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    -ms-overflow-style: none; /* hide scroll bar on IE and edge */
+    width: auto;
+}
+
+/* hide scroll bar on chrome, safari, and opera */
+.snap-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+.section-content {
+    height: fit-content;
 }
 
 .tagline2 {
@@ -92,32 +128,6 @@ img,
   letter-spacing: 5px;
   text-transform: uppercase;
   animation: text 2s 1;
-}
-
-.description-one {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-
-.description-two {
-  grid-column: 1/2;
-  grid-row: 4/5;
-}
-
-.description-three {
-  grid-column: 1/2;
-  grid-row: 5/6;
-}
-
-.description-four {
-  grid-column: 1/2;
-  grid-row: 6/7;
-}
-
-.form-container {
-  grid-column: 1/2;
-  grid-row: 7/8;
-  padding-bottom: 100px;
 }
 
 .form-header {
