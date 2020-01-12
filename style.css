@@ -114,8 +114,8 @@ img, .mockup {
 .section {
     display: flex;
     align-items: center;
-    justify-content: left;
-    scroll-snap-align: start;
+    justify-content: center;
+    scroll-snap-align: center;
     height: 100vh;
 }
 
