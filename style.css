@@ -1,0 +1,138 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background: url(/Photos/Background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 5% 95% 95% 95% 95% 95%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+span {
+  color: #40cbcb;
+}
+
+button {
+  background-color: #40cbcb;
+  font: black;
+  border-radius: 0.5em;
+  height: 20px;
+}
+
+.nav-form input {
+  width: 150px;
+  height: 20px;
+  border-radius: 0.5em;
+  border: none;
+}
+
+form {
+    height: 400px;
+}
+
+.center {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+img,
+.mockup {
+  height: 90vh;
+  position: fixed;
+}
+
+.nav-container {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.nav-form,
+.nav-text {
+  align-self: center;
+  padding-right: 20px;
+}
+
+.tagline-container {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.tagline2 {
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  animation: text 2s 1;
+}
+
+.description-one {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.description-two {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.description-three {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+.description-four {
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+
+.form-container {
+  grid-column: 1/2;
+  grid-row: 7/8;
+  padding-bottom: 100px;
+}
+
+.form-header {
+    padding: 20px;
+}
+
+.form input {
+    width: 200px;
+    height: 20px;
+    border-radius: 0.5em;
+    border: none;
+    color: black;
+}
+
+@keyframes text {
+  0% {
+    letter-spacing: 3px;
+  }
+  50% {
+    letter-spacing: 15px;
+  }
+  100% {
+    letter-spacing: 5px;
+  }
+}
