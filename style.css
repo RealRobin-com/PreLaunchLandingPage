@@ -23,12 +23,12 @@ html::before {
 
 h2 {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 5px;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -49,14 +49,14 @@ button {
 }
 
 input {
-  width: 200px;
-  height: 20px;
-  border-radius: 0.5em;
+  box-shadow: none;
   border: none;
-}
-
-form {
-  height: 400px;
+  -webkit-appearance: searchfield;
+  -moz-appearance: searchfield;
+  appearance: searchfield;
+  background-clip: padding-box;
+  color: #000;
+  background-color: #fff;
 }
 
 .center {
@@ -72,12 +72,6 @@ form {
   height: 2em;
   width: 100vw;
   position: fixed;
-}
-
-.nav-form,
-.nav-text {
-  padding-right: 20px;
-  height: 1.2em;
 }
 
 .content-wrapper {
@@ -125,25 +119,84 @@ form {
   align-items: center;
   justify-content: left;
   scroll-snap-align: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-content {
   width: 60%;
   height: fit-content;
-
-  /* transform: translate(-50%, 0); */
 }
 
-.tagline2 {
+.hero-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.hero-form-heading {
+  margin: 10px;
+  width: 100%;
+}
+
+.hero-form {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-form > button[type='submit'] {
+  position: absolute;
+  right: 0;
+}
+
+.hero-form:invalid > button[type='submit'] {
+  opacity: 0;
+  font-size: 0;
+  transition: opacity 0.3s, height 0.3s, font-size, 0.3s;
+}
+.hero-form:valid > button[type='submit'] {
+  font-size: 1.2em;
+  height: 100%;
+  opacity: 100%;
+  transition: opacity 0.3s, height 0.3s, font-size, 0.3s;
+}
+
+.hero-form > input {
+  width: 300px;
+  max-width: 100%;
+  height: 3em;
+  font-size: 1em;
+  border-radius: 10px;
+  text-indent: 1em;
+  padding-right: calc(1.2em * 6);
+}
+
+.hero-form > input::-webkit-input-placeholder {
+  text-indent: 1em;
+}
+.hero-form > input::-moz-placeholder {
+  /* Firefox 19+ */
+  text-indent: 1em;
+}
+.hero-form > input:-ms-input-placeholder {
+  /* IE 10+ */
+  text-indent: 1em;
+}
+.hero-form > input:-moz-placeholder {
+  /* Firefox 18- */
+  text-indent: 1em;
+}
+
+.animate {
   font-size: 2em;
   letter-spacing: 5px;
   text-transform: uppercase;
   animation: text 2s 1;
-}
-
-.form-header {
-  padding: 20px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -168,11 +221,6 @@ form {
 }
 
 @media only screen and (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    height: unset;
-    margin-top: 20px;
-  }
   h2 {
     font-size: 2em;
   }
