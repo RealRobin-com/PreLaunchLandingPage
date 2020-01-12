@@ -113,10 +113,11 @@ form {
   padding: 0;
 }
 
-img,
 .mockup {
-  width: 40vw;
   max-width: 548.5px;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
 }
 
 .section {
@@ -146,12 +147,6 @@ img,
 }
 
 @media only screen and (max-width: 1024px) {
-  .nav-container {
-    flex-direction: column;
-    height: unset;
-    margin-top: 20px;
-  }
-
   .tagline-container {
     scroll-snap-align: start;
     display: flex;
@@ -173,12 +168,21 @@ img,
 }
 
 @media only screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    height: unset;
+    margin-top: 20px;
+  }
   h2 {
     font-size: 2em;
   }
 
   h3 {
     font-size: 1em;
+  }
+  .mockup {
+    width: 60vw;
+    max-width: 548.5px;
   }
 }
 
