@@ -19,14 +19,14 @@
             <div class="section tagline-container center">
                 <div class="section-content">
                     <h2>Social Media,</h2>
-                    <h2 class="animate">designed for <span>you.</span></h2>
+                    <h2 class="animate">designed for <span class="primary-color">you.</span></h2>
                     <div class="hero-form-container">
-                        <div class="hero-form-heading">
+                        <div class="hero-form-header">
                             <h4>Be the first to know</h4>
                         </div>
                         <form class="form hero-form">
                             <input name="email" type="email" required placeholder="Email">
-                            <button type="submit" class="submit">
+                            <button type="submit" class="submit primary-background">
                                 <i class="far fa-paper-plane"></i> Submit
                             </button>
                         </form>
@@ -91,30 +91,34 @@
 
             <div class="section center">
                 <div class="section-content">
-                    <div class="bottom-form-header">
-                        <h4>
-                            Be the first to know
-                        </h4>
-                        <p>
-                            Don't worry, we won't spam you.
-                        </p>
-                    </div>
-                    <div>
-                        <form class="">
-                            <input type="text" required placeholder="Name">
-                            <br><br>
-                            <input type="email" required placeholder="Email">
-                            <br><br>
-                            <input type="phone number" placeholder="Phone Number">
-                            <br><br>
-                            <button type="submit" value="submit">
-                                Submit
-                            </button>
-                        </form>
+                    <div class="hero-form-container">
+                        <div class="hero-form-header">
+                            <h4>
+                                Be the first to know
+                            </h4>
+                            <span>
+                                Don't worry, we won't spam you.
+                            </span>
+                        </div>
+                        <div>
+                            <form class="form">
+                                <input type="text" required placeholder="Name">
+                                <input type="email" required placeholder="Email">
+                                <input type="tel" placeholder="Phone Number">
+                                <button type="submit" class="submit primary-background">
+                                    <i class="far fa-paper-plane"></i> Submit
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <script>
+        const s = document.querySelector('.snap-scroller');
+        s.scrollTo(0, s.scrollHeight);
+    </script>
 </body>
 
 </html>
