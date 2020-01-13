@@ -22,9 +22,15 @@ html::before {
   opacity: 70%;
 }
 
+h1 {
+  margin: 0;
+  font-size: 4.5rem;
+  letter-spacing: 5px;
+}
+
 h2 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 5px;
 }
 
@@ -102,12 +108,17 @@ input {
   scroll-snap-points-y: repeat(3rem);
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
-  -ms-overflow-style: none; /* hide scroll bar on IE and edge */
+  /* hide scroll bar on IE and edge */
+  -ms-overflow-style: none;
 }
 
 /* hide scroll bar on chrome, safari, and opera */
 .snap-scroller::-webkit-scrollbar {
   display: none;
+}
+
+.name {
+  padding: 1em;
 }
 
 .image-container {
@@ -274,6 +285,9 @@ input {
 }
 
 @media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
   h2 {
     font-size: 2em;
   }
