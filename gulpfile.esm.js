@@ -1,7 +1,6 @@
 import gulp from 'gulp';
-import babel from 'gulp-babel';
 import concat from 'gulp-concat';
-import uglify from 'gulp-uglify';
+import terser from 'gulp-terser';
 import rename from 'gulp-rename';
 import cleanCSS from 'gulp-clean-css';
 import htmlMin from 'gulp-htmlmin';
@@ -46,7 +45,7 @@ export function styles() {
 
 export function scripts() {
     return gulp.src(paths.scripts.src, { sourcemaps: true })
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(concat('index.js'))
         .pipe(gulp.dest(paths.scripts.dest));
 }

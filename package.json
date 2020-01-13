@@ -1,34 +1,30 @@
 {
-  "name": "landing-page",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RealRobin-com/PreLaunchLandingPage.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RealRobin-com/PreLaunchLandingPage/issues"
-  },
-  "homepage": "https://github.com/RealRobin-com/PreLaunchLandingPage#readme",
-  "devDependencies": {
-    "@babel/core": "^7.8.0",
-    "@babel/preset-env": "^7.8.2",
-    "@babel/register": "^7.8.0",
-    "del": "^5.1.0",
-    "esm": "^3.2.25",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-minify": "^3.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2"
-  }
+    "name": "landing-page",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RealRobin-com/PreLaunchLandingPage.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RealRobin-com/PreLaunchLandingPage/issues"
+    },
+    "homepage": "https://github.com/RealRobin-com/PreLaunchLandingPage#readme",
+    "devDependencies": {
+        "del": "^5.1.0",
+        "esm": "^3.2.25",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-minify": "^3.1.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-terser": "^1.2.0"
+    }
 }
