@@ -3,18 +3,18 @@ html {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
   --primary-color: #40cbcb;
 }
 
 html::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: url("/Photos/background.jpg") no-repeat center center fixed;
+  background: url('/Photos/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -72,10 +72,13 @@ input {
 }
 
 .animate {
+  animation: textFullScreen 2s 1;
+}
+
+.uppercase {
   font-size: 2em;
   letter-spacing: 5px;
   text-transform: uppercase;
-  animation: textFullScreen 2s 1;
 }
 
 .center {
@@ -164,7 +167,7 @@ input {
   position: relative;
 }
 
-.hero-form > button[type="submit"] {
+.hero-form > button[type='submit'] {
   transition: opacity 0.3s, width 0.3s;
   position: absolute;
   right: 0;
@@ -172,12 +175,12 @@ input {
   height: calc(100% - 10px) !important;
 }
 
-.hero-form:invalid > button[type="submit"] {
+.hero-form:invalid > button[type='submit'] {
   opacity: 0;
   width: 0;
 }
 
-.hero-form:valid > button[type="submit"] {
+.hero-form:valid > button[type='submit'] {
   width: calc(1em * 6);
   opacity: 100%;
   box-shadow: -5px 0px 12px -7px rgba(0, 0, 0, 0.47);
@@ -194,7 +197,7 @@ input {
   align-items: center;
 }
 
-.form > button[type="submit"] {
+.form > button[type='submit'] {
   height: 2.7em;
   font-size: 1.2em;
   overflow: hidden;
@@ -205,21 +208,21 @@ input {
   border: none;
 }
 
-.form:invalid > button[type="submit"] {
+.form:invalid > button[type='submit'] {
   opacity: 60%;
 }
 
-.form:invalid > button[type="submit"]:hover {
+.form:invalid > button[type='submit']:hover {
   opacity: 60%;
 }
 
-.form > button[type="submit"]:hover {
+.form > button[type='submit']:hover {
   opacity: 110%;
   cursor: pointer;
   box-shadow: 0px 0px 2px 2px var(--primary-color);
 }
 
-.form > button[type="submit"] > i {
+.form > button[type='submit'] > i {
   padding-right: 5px;
 }
 
