@@ -53,7 +53,7 @@ h4 {
 }
 
 .logo-font {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 4rem;
@@ -241,7 +241,7 @@ textarea {
 }
 
 .hero-form-header {
-  margin: 10px;
+  margin: 10px 0;
   width: 100%;
 }
 
