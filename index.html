@@ -3,6 +3,7 @@
 
 <head>
     <script src="https://kit.fontawesome.com/a8311f45a9.js" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width,initial-scale=1">
@@ -14,6 +15,7 @@
 </head>
 
 <body>
+    <div id="toasts"></div>
     <div class="content-wrapper">
         <div class="snap-scroller">
             <div class="section tagline-container center">
@@ -29,8 +31,10 @@
                         <div class="hero-form-header">
                             <h4>Be the first to know</h4>
                         </div>
-                        <form class="form hero-form">
-                            <input name="email" type="email" required placeholder="Email">
+                        <form class="form hero-form"
+                            action="https://lk9mdyson1.execute-api.us-east-1.amazonaws.com/prod">
+                            <input name="email" type="email" pattern="[\w\d._%+-]+@[\w\d.-]+\.[\w]{2,}$" required
+                                placeholder="Email">
                             <button type="submit" class="submit primary-background">
                                 <i class="far fa-paper-plane"></i> Submit
                             </button>
@@ -93,7 +97,7 @@
                     <h2 class="primary-color uppercase">redesigned.</h2>
                 </div>
             </div>
-            ß
+
             <div class="section center">
                 <div class="section-content">
                     <div class="hero-form-container">
@@ -106,10 +110,10 @@
                             </span>
                         </div>
                         <div>
-                            <form class="form">
+                            <form class="form" action="https://lk9mdyson1.execute-api.us-east-1.amazonaws.com/prod">
                                 <input type="text" name="name" required placeholder="Name">
                                 <input type="email" name="email" required placeholder="Email">
-                                <input type="tel" name="phone" placeholder="Phone Number">
+                                <input type="text" name="comment" placeholder="What do you think?">
                                 <button type="submit" class="submit primary-background">
                                     <i class="far fa-paper-plane"></i> Submit
                                 </button>
@@ -120,6 +124,42 @@
             </div>
         </div>
     </div>
+    <template id="success-toast-template">
+        <div class="toast success">
+            <div class="toast-container">
+                <div class="toast-left">
+                    <i class="far fa-check-circle"></i>
+                </div>
+                <div class="toast-body">
+                    <div class="toast-header">Success</div>
+                    <div class="toast-message"></div>
+                </div>
+                <div class="toast-right">
+                    <span class="toast-close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="error-toast-template">
+        <div class="toast error">
+            <div class="toast-container">
+                <div class="toast-left">
+                    <i class="far fa-times-circle"></i>
+                </div>
+                <div class="toast-body">
+                    <div class="toast-header">Uh oh</div>
+                    <div class="toast-message"></div>
+                </div>
+                <div class="toast-right">
+                    <span class="toast-close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </template>
 </body>
 
 </html>
