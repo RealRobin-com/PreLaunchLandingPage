@@ -362,6 +362,7 @@ textarea {
   .image-container {
     position: unset;
     transform: unset;
+    margin: auto;
   }
   .section {
     margin: 0 10px;
@@ -371,9 +372,16 @@ textarea {
     transform: unset;
     width: 100%;
   }
+
+  .mobile-hide {
+    display: none !important;
+  }
+  .mobile-show-flex {
+    display: flex !important;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .mobile-show-flex {
     display: none !important;
   }
@@ -399,18 +407,9 @@ textarea {
     font-size: 3em;
   }
 
-  .mockup {
-    width: 100vw;
-  }
   .animate {
     font-size: 2em;
     animation: textSmallScreen 2s 1;
-  }
-  .mobile-hide {
-    display: none !important;
-  }
-  .mobile-show-flex {
-    display: flex !important;
   }
 }
 
