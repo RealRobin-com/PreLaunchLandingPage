@@ -146,6 +146,15 @@ textarea {
   height: fit-content;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -223,12 +232,7 @@ textarea {
 }
 
 .hero-form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 50px;
-  width: 100%;
 }
 
 .hero-form-header {
@@ -264,7 +268,9 @@ textarea {
 }
 
 .hero-form > input {
-  padding-right: calc(1.2em * 6);
+  --padding-for-submit-button: calc(1.2em * 6);
+  max-width: calc(100% - var(--padding-for-submit-button));
+  padding-right: var(--padding-for-submit-button);
 }
 
 .footer-form > button[type='submit'] {
