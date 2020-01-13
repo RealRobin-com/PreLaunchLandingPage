@@ -59,7 +59,8 @@ button {
   padding: unset;
 }
 
-input {
+input,
+textarea {
   box-shadow: none;
   border: none;
   -webkit-appearance: searchfield;
@@ -145,51 +146,6 @@ input {
   height: fit-content;
 }
 
-.hero-form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  width: 100%;
-}
-
-.hero-form-header {
-  margin: 10px;
-  width: 100%;
-}
-
-.hero-form {
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.hero-form > button[type='submit'] {
-  transition: opacity 0.3s, width 0.3s;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: calc(100% - 10px) !important;
-}
-
-.hero-form:invalid > button[type='submit'] {
-  opacity: 0;
-  width: 0;
-}
-
-.hero-form:valid > button[type='submit'] {
-  width: calc(1em * 6);
-  opacity: 100%;
-  box-shadow: -5px 0px 12px -7px rgba(0, 0, 0, 0.47);
-}
-
-.hero-form > input {
-  padding-right: calc(1.2em * 6);
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -226,18 +182,27 @@ input {
   padding-right: 5px;
 }
 
-.form > input {
+.form > input,
+.form > textarea {
   width: 300px;
   max-width: 100%;
   height: 2.5em;
   font-size: 1em;
   border-radius: 10px;
   text-indent: 1em;
-  padding-right: 1em;
   margin-bottom: 10px;
 }
 
-.form > input:focus {
+.form > textarea {
+  text-indent: 0;
+  width: calc(300px - 2em);
+  padding: 1em;
+  height: 7.5em;
+  resize: none;
+}
+
+.form > input:focus,
+.form > textarea:focus {
   outline: none;
 }
 
@@ -255,6 +220,56 @@ input {
 .form > input:-moz-placeholder {
   /* Firefox 18- */
   text-indent: 1em;
+}
+
+.hero-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.hero-form-header {
+  margin: 10px;
+  width: 100%;
+}
+
+.hero-form {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-form > button[type='submit'] {
+  transition: opacity 0.3s, width 0.3s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: calc(100% - 10px) !important;
+}
+
+.hero-form:invalid > button[type='submit'] {
+  opacity: 0;
+  width: 0;
+}
+
+.hero-form:valid > button[type='submit'] {
+  width: calc(0.9em * 6);
+  opacity: 100%;
+  box-shadow: -5px 0px 12px -7px rgba(0, 0, 0, 0.47);
+}
+
+.hero-form > input {
+  padding-right: calc(1.2em * 6);
+}
+
+.footer-form > button[type='submit'] {
+  width: 300px;
+  max-width: 100%;
 }
 
 .toast {

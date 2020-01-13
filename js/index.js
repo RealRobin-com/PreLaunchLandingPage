@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
             const url = event.target.action;
             const data = {};
             for (let element of event.target.elements) {
-                if (!element.tagName.toLowerCase() === 'input' || !element.name) {
+                const tag = element.tagName.toLowerCase();
+                if (!(tag === 'input' || tag === 'textarea') || !element.name) {
                     continue;
                 }
                 data[element.name] = element.value;
