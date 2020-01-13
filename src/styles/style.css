@@ -52,6 +52,15 @@ h4 {
   background-color: var(--primary-color);
 }
 
+.logo-font {
+  font-family: "Rokkitt", serif;
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  color: var(--primary-color);
+}
+
 button {
   color: #fff;
   border-radius: 0.5em;
@@ -112,10 +121,6 @@ textarea {
   display: none;
 }
 
-.name {
-  padding: 1em;
-}
-
 .image-container {
   position: fixed;
   left: 60%;
@@ -128,7 +133,7 @@ textarea {
 
 .mockup {
   max-width: 548.5px;
-  max-height: 90vh;
+  max-height: 100vh;
   width: auto;
   height: auto;
 }
@@ -372,7 +377,7 @@ textarea {
   .mobile-show-flex {
     display: none !important;
   }
-  
+
   .mobile-hide {
     display: block !important;
   }
@@ -389,9 +394,13 @@ textarea {
   h3 {
     font-size: 1em;
   }
+
+  .logo-font {
+    font-size: 3em;
+  }
+
   .mockup {
     width: 100vw;
-    max-width: 100%;
   }
   .animate {
     font-size: 2em;
