@@ -122,6 +122,22 @@ textarea {
   display: none;
 }
 
+.scroll-indicator {
+  opacity: 20%;
+  color: #999;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  height: 4em;
+  animation: 1s 1 8s forwards hideMe, 0.3s 1 3s forwards fadeIn;
+}
+
+.scroll-indicator-arrow {
+  font-size: 1em;
+  animation: 1s infinite 4s alternate bounce;
+}
+
 .image-container {
   position: fixed;
   left: 60%;
@@ -450,5 +466,28 @@ textarea {
   }
   100% {
     letter-spacing: 5px;
+  }
+}
+@keyframes bounce {
+  from {
+    bottom: 10px;
+    font-size: 1em;
+  }
+  to {
+    bottom: 20px;
+    font-size: 2.5em;
+  }
+}
+@keyframes hideMe {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 100%;
   }
 }
