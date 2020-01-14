@@ -65,4 +65,17 @@ window.addEventListener('DOMContentLoaded', () => {
             return false;
         });
     }
+
+    // keep all email inputs in sync
+    const emailInputs = document.querySelectorAll('input[type="email"');
+    for (let emailInput of emailInputs) {
+        emailInput.addEventListener('input', (event) => {
+            const newValue = event.target.value;
+            for (let emailInput of emailInputs) {
+                if (emailInput.value !== newValue) {
+                    emailInput.value = newValue;
+                }
+            }
+        });
+    }
 });
