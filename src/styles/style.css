@@ -6,6 +6,7 @@ html {
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
   --primary-color: #40cbcb;
+  -webkit-overflow-scrolling: touch;
 }
 
 html::before {
@@ -132,7 +133,7 @@ textarea {
 }
 
 .mockup {
-  max-width: 548.5px;
+  max-width: 100%;
   max-height: 100vh;
   width: auto;
   height: auto;

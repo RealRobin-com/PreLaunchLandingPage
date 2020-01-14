@@ -22,6 +22,10 @@ const paths = {
     html: {
         src: 'src/index.html',
         dest: 'dist/'
+    },
+    favicon: {
+        src: 'src/favicon/**/*',
+        dest: 'dist/'
     }
 };
 
@@ -61,6 +65,11 @@ export function html() {
         .pipe(gulp.dest(paths.html.dest))
 }
 
+export function favicon() {
+    return gulp.src(paths.favicon.src)
+        .pipe(gulp.dest(paths.favicon.dest));
+}
+
 /*
  * You could even use `export as` to rename exported tasks
  */
@@ -71,7 +80,7 @@ function watchFiles() {
 }
 export { watchFiles as watch };
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, html, images));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, html, images, favicon));
 /*
  * Export a default task
  */
