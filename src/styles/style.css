@@ -176,13 +176,10 @@ textarea {
   align-content: center;
   width: calc(1em * 6);
   border: none;
-  box-shadow: 0 10px 9px -5px rgba(0, 0, 0, 0.47);
 }
 
 .form > button[type="submit"]:active {
   outline: none;
-  box-shadow: 0 5px 9px -5px rgba(0, 0, 0, 0.47);
-  transition: box-shadow 0.3s ease-in-out;
 }
 
 .form > button[type="submit"]:focus {
@@ -193,14 +190,7 @@ textarea {
   opacity: 60%;
 }
 
-.form:invalid > button[type="submit"]:hover {
-  opacity: 50%;
-  cursor: auto !important;
-  box-shadow: none !important;
-}
-
-.form > button[type="submit"]:hover {
-  opacity: 110%;
+.form:valid > button[type="submit"]:hover {
   cursor: pointer;
   filter: brightness(110%);
 }
@@ -267,7 +257,7 @@ textarea {
 }
 
 .hero-form > button[type="submit"] {
-  transition: opacity 0.3s, width 0.3s;
+  transition: opacity 0.3s, width 0.3s, box-shadow 0.3s;
   position: absolute;
   right: 0;
   top: 0;
@@ -285,6 +275,10 @@ textarea {
   box-shadow: -5px 0px 12px -7px rgba(0, 0, 0, 0.47);
 }
 
+.hero-form:valid > button[type="submit"]:active {
+  box-shadow: -1px 0px 12px -7px rgba(0, 0, 0, 0.47);
+}
+
 .hero-form > input {
   --padding-for-submit-button: calc(1.2em * 6);
   max-width: calc(100% - var(--padding-for-submit-button));
@@ -294,6 +288,15 @@ textarea {
 .footer-form > button[type="submit"] {
   width: 300px;
   max-width: 100%;
+  transition: box-shadow 0.3s;
+}
+
+.footer-form:valid > button[type="submit"] {
+  box-shadow: 0 5px 9px -5px rgba(0, 0, 0, 0.47);
+}
+
+.footer-form:valid > button[type="submit"]:active {
+  box-shadow: 0 0px 9px -5px rgba(0, 0, 0, 0.47);
 }
 
 .toast {
