@@ -1,3 +1,7 @@
+fetch('https://preregister.realrobin.com/m', {
+    method: 'POST'
+});
+
 window.addEventListener('DOMContentLoaded', () => {
     const forms = document.querySelectorAll('.form');
 
