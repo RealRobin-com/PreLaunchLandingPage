@@ -176,6 +176,17 @@ textarea {
   align-content: center;
   width: calc(1em * 6);
   border: none;
+  box-shadow: 0 10px 9px -5px rgba(0, 0, 0, 0.47);
+}
+
+.form > button[type="submit"]:active {
+  outline: none;
+  box-shadow: 0 5px 9px -5px rgba(0, 0, 0, 0.47);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.form > button[type="submit"]:focus {
+  outline: none;
 }
 
 .form:invalid > button[type="submit"] {
@@ -183,13 +194,15 @@ textarea {
 }
 
 .form:invalid > button[type="submit"]:hover {
-  opacity: 60%;
+  opacity: 50%;
+  cursor: auto !important;
+  box-shadow: none !important;
 }
 
 .form > button[type="submit"]:hover {
   opacity: 110%;
   cursor: pointer;
-  box-shadow: 0px 0px 2px 2px var(--primary-color);
+  filter: brightness(110%);
 }
 
 .form > button[type="submit"] > i {
