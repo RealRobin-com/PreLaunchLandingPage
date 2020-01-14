@@ -135,7 +135,7 @@ textarea {
 
 .scroll-indicator-arrow {
   font-size: 1em;
-  animation: 1s infinite 4s alternate bounce;
+  animation: 1s 4 4s alternate bounce;
 }
 
 .image-container {
