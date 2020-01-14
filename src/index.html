@@ -146,7 +146,8 @@
                         <div>
                             <form class="form footer-form" action="https://preregister.realrobin.com">
                                 <input type="text" name="name" required placeholder="Name">
-                                <input type="email" name="email" required placeholder="Email">
+                                <input type="email" name="email" required pattern="[\w\d._%+-]+@[\w\d.-]+\.[\w]{2,}$"
+                                    placeholder="Email">
                                 <textarea type="textarea" name="comment"
                                     placeholder="Thoughts? We'd love to hear them!"></textarea>
                                 <button type="submit" class="submit primary-background">
