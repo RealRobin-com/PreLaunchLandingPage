@@ -318,6 +318,12 @@ textarea {
   box-shadow: 0 0px 9px -5px rgba(0, 0, 0, 0.47);
 }
 
+.copyright {
+  text-align: center;
+  padding-top: 3em;
+  font-size: 1em;
+}
+
 .toast {
   width: 300px;
   max-width: 90vw;
@@ -438,6 +444,11 @@ textarea {
     font-size: 1em;
   }
 
+  .form-header {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+  }
+
   .logo-font {
     font-size: 3em;
   }
@@ -462,10 +473,10 @@ textarea {
 
 @keyframes textSmallScreen {
   0% {
-    letter-spacing: 3px;
+    letter-spacing: 5px;
   }
   50% {
-    letter-spacing: 8px;
+    letter-spacing: 10px;
   }
   100% {
     letter-spacing: 5px;
