@@ -167,6 +167,9 @@ textarea {
   width: 60%;
   height: fit-content;
 }
+.line-height {
+  line-height: 2em;
+}
 
 .form-container {
   display: flex;
