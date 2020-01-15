@@ -161,6 +161,7 @@ textarea {
   justify-content: left;
   scroll-snap-align: center;
   min-height: 100vh;
+  position: relative;
 }
 
 .section-content {
@@ -318,10 +319,16 @@ textarea {
   box-shadow: 0 0px 9px -5px rgba(0, 0, 0, 0.47);
 }
 
+.copyright-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .copyright {
-  text-align: center;
-  padding-top: 3em;
   font-size: 1em;
+  text-align: center;
 }
 
 .toast {
@@ -407,7 +414,7 @@ textarea {
   }
   .section {
     margin: 0 10px;
-    justify-content: center;
+    justify-content: center; 
   }
   .section-content {
     transform: unset;
