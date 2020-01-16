@@ -55,7 +55,7 @@ h4 {
 
 .logo-font {
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  margin: 0.5em;
   padding: 0;
   font-size: 4rem;
   letter-spacing: 0;
@@ -168,8 +168,12 @@ textarea {
   width: 60%;
   height: fit-content;
 }
-.line-height {
-  line-height: 2em;
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 30%;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .form-container {
@@ -414,7 +418,7 @@ textarea {
   }
   .section {
     margin: 0 10px;
-    justify-content: center; 
+    justify-content: center;
   }
   .section-content {
     transform: unset;
@@ -436,6 +440,10 @@ textarea {
 
   .mobile-hide {
     display: block !important;
+  }
+
+  .line-height {
+    line-height: 2em;
   }
 }
 
@@ -463,6 +471,10 @@ textarea {
   .animate {
     font-size: 2em;
     animation: textSmallScreen 2s 1;
+  }
+
+  .line-height {
+    line-height: 1em;
   }
 }
 
